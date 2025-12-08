@@ -77,7 +77,7 @@ class InvestingCalendarScraper:
             s_date_str = start_date.replace('/', '-')
             e_date_str = end_date.replace('/', '-')
             
-            output_dir = "output"
+            output_dir = "output/invest_EC"
             if not os.path.exists(output_dir):
                 os.makedirs(output_dir)
                 
