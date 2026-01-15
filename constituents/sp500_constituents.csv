@@ -1,0 +1,504 @@
+Symbol,GICS Sector,GICS Sub-Industry,fetched_at_utc
+A,Health Care,Life Sciences Tools & Services,2026-01-07T13:10:16.321436+00:00
+AAPL,Information Technology,"Technology Hardware, Storage & Peripherals",2026-01-07T13:10:16.321436+00:00
+ABBV,Health Care,Biotechnology,2026-01-07T13:10:16.321436+00:00
+ABNB,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",2026-01-07T13:10:16.321436+00:00
+ABT,Health Care,Health Care Equipment,2026-01-07T13:10:16.321436+00:00
+ACGL,Financials,Property & Casualty Insurance,2026-01-07T13:10:16.321436+00:00
+ACN,Information Technology,IT Consulting & Other Services,2026-01-07T13:10:16.321436+00:00
+ADBE,Information Technology,Application Software,2026-01-07T13:10:16.321436+00:00
+ADI,Information Technology,Semiconductors,2026-01-07T13:10:16.321436+00:00
+ADM,Consumer Staples,Agricultural Products & Services,2026-01-07T13:10:16.321436+00:00
+ADP,Industrials,Human Resource & Employment Services,2026-01-07T13:10:16.321436+00:00
+ADSK,Information Technology,Application Software,2026-01-07T13:10:16.321436+00:00
+AEE,Utilities,Multi-Utilities,2026-01-07T13:10:16.321436+00:00
+AEP,Utilities,Electric Utilities,2026-01-07T13:10:16.321436+00:00
+AES,Utilities,Independent Power Producers & Energy Traders,2026-01-07T13:10:16.321436+00:00
+AFL,Financials,Life & Health Insurance,2026-01-07T13:10:16.321436+00:00
+AIG,Financials,Multi-line Insurance,2026-01-07T13:10:16.321436+00:00
+AIZ,Financials,Multi-line Insurance,2026-01-07T13:10:16.321436+00:00
+AJG,Financials,Insurance Brokers,2026-01-07T13:10:16.321436+00:00
+AKAM,Information Technology,Internet Services & Infrastructure,2026-01-07T13:10:16.321436+00:00
+ALB,Materials,Specialty Chemicals,2026-01-07T13:10:16.321436+00:00
+ALGN,Health Care,Health Care Supplies,2026-01-07T13:10:16.321436+00:00
+ALL,Financials,Property & Casualty Insurance,2026-01-07T13:10:16.321436+00:00
+ALLE,Industrials,Building Products,2026-01-07T13:10:16.321436+00:00
+AMAT,Information Technology,Semiconductor Materials & Equipment,2026-01-07T13:10:16.321436+00:00
+AMCR,Materials,Paper & Plastic Packaging Products & Materials,2026-01-07T13:10:16.321436+00:00
+AMD,Information Technology,Semiconductors,2026-01-07T13:10:16.321436+00:00
+AME,Industrials,Electrical Components & Equipment,2026-01-07T13:10:16.321436+00:00
+AMGN,Health Care,Biotechnology,2026-01-07T13:10:16.321436+00:00
+AMP,Financials,Asset Management & Custody Banks,2026-01-07T13:10:16.321436+00:00
+AMT,Real Estate,Telecom Tower REITs,2026-01-07T13:10:16.321436+00:00
+AMZN,Consumer Discretionary,Broadline Retail,2026-01-07T13:10:16.321436+00:00
+ANET,Information Technology,Communications Equipment,2026-01-07T13:10:16.321436+00:00
+AON,Financials,Insurance Brokers,2026-01-07T13:10:16.321436+00:00
+AOS,Industrials,Building Products,2026-01-07T13:10:16.321436+00:00
+APA,Energy,Oil & Gas Exploration & Production,2026-01-07T13:10:16.321436+00:00
+APD,Materials,Industrial Gases,2026-01-07T13:10:16.321436+00:00
+APH,Information Technology,Electronic Components,2026-01-07T13:10:16.321436+00:00
+APO,Financials,Asset Management & Custody Banks,2026-01-07T13:10:16.321436+00:00
+APP,Information Technology,Application Software,2026-01-07T13:10:16.321436+00:00
+APTV,Consumer Discretionary,Automotive Parts & Equipment,2026-01-07T13:10:16.321436+00:00
+ARE,Real Estate,Office REITs,2026-01-07T13:10:16.321436+00:00
+ARES,Financials,Asset Management & Custody Banks,2026-01-07T13:10:16.321436+00:00
+ATO,Utilities,Gas Utilities,2026-01-07T13:10:16.321436+00:00
+AVB,Real Estate,Multi-Family Residential REITs,2026-01-07T13:10:16.321436+00:00
+AVGO,Information Technology,Semiconductors,2026-01-07T13:10:16.321436+00:00
+AVY,Materials,Paper & Plastic Packaging Products & Materials,2026-01-07T13:10:16.321436+00:00
+AWK,Utilities,Water Utilities,2026-01-07T13:10:16.321436+00:00
+AXON,Industrials,Aerospace & Defense,2026-01-07T13:10:16.321436+00:00
+AXP,Financials,Consumer Finance,2026-01-07T13:10:16.321436+00:00
+AZO,Consumer Discretionary,Automotive Retail,2026-01-07T13:10:16.321436+00:00
+BA,Industrials,Aerospace & Defense,2026-01-07T13:10:16.321436+00:00
+BAC,Financials,Diversified Banks,2026-01-07T13:10:16.321436+00:00
+BALL,Materials,"Metal, Glass & Plastic Containers",2026-01-07T13:10:16.321436+00:00
+BAX,Health Care,Health Care Equipment,2026-01-07T13:10:16.321436+00:00
+BBY,Consumer Discretionary,Computer & Electronics Retail,2026-01-07T13:10:16.321436+00:00
+BDX,Health Care,Health Care Equipment,2026-01-07T13:10:16.321436+00:00
+BEN,Financials,Asset Management & Custody Banks,2026-01-07T13:10:16.321436+00:00
+BF.B,Consumer Staples,Distillers & Vintners,2026-01-07T13:10:16.321436+00:00
+BG,Consumer Staples,Agricultural Products & Services,2026-01-07T13:10:16.321436+00:00
+BIIB,Health Care,Biotechnology,2026-01-07T13:10:16.321436+00:00
+BK,Financials,Asset Management & Custody Banks,2026-01-07T13:10:16.321436+00:00
+BKNG,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",2026-01-07T13:10:16.321436+00:00
+BKR,Energy,Oil & Gas Equipment & Services,2026-01-07T13:10:16.321436+00:00
+BLDR,Industrials,Building Products,2026-01-07T13:10:16.321436+00:00
+BLK,Financials,Asset Management & Custody Banks,2026-01-07T13:10:16.321436+00:00
+BMY,Health Care,Pharmaceuticals,2026-01-07T13:10:16.321436+00:00
+BR,Industrials,Data Processing & Outsourced Services,2026-01-07T13:10:16.321436+00:00
+BRK.B,Financials,Multi-Sector Holdings,2026-01-07T13:10:16.321436+00:00
+BRO,Financials,Insurance Brokers,2026-01-07T13:10:16.321436+00:00
+BSX,Health Care,Health Care Equipment,2026-01-07T13:10:16.321436+00:00
+BX,Financials,Asset Management & Custody Banks,2026-01-07T13:10:16.321436+00:00
+BXP,Real Estate,Office REITs,2026-01-07T13:10:16.321436+00:00
+C,Financials,Diversified Banks,2026-01-07T13:10:16.321436+00:00
+CAG,Consumer Staples,Packaged Foods & Meats,2026-01-07T13:10:16.321436+00:00
+CAH,Health Care,Health Care Distributors,2026-01-07T13:10:16.321436+00:00
+CARR,Industrials,Building Products,2026-01-07T13:10:16.321436+00:00
+CAT,Industrials,Construction Machinery & Heavy Transportation Equipment,2026-01-07T13:10:16.321436+00:00
+CB,Financials,Property & Casualty Insurance,2026-01-07T13:10:16.321436+00:00
+CBOE,Financials,Financial Exchanges & Data,2026-01-07T13:10:16.321436+00:00
+CBRE,Real Estate,Real Estate Services,2026-01-07T13:10:16.321436+00:00
+CCI,Real Estate,Telecom Tower REITs,2026-01-07T13:10:16.321436+00:00
+CCL,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",2026-01-07T13:10:16.321436+00:00
+CDNS,Information Technology,Application Software,2026-01-07T13:10:16.321436+00:00
+CDW,Information Technology,Technology Distributors,2026-01-07T13:10:16.321436+00:00
+CEG,Utilities,Electric Utilities,2026-01-07T13:10:16.321436+00:00
+CF,Materials,Fertilizers & Agricultural Chemicals,2026-01-07T13:10:16.321436+00:00
+CFG,Financials,Regional Banks,2026-01-07T13:10:16.321436+00:00
+CHD,Consumer Staples,Household Products,2026-01-07T13:10:16.321436+00:00
+CHRW,Industrials,Air Freight & Logistics,2026-01-07T13:10:16.321436+00:00
+CHTR,Communication Services,Cable & Satellite,2026-01-07T13:10:16.321436+00:00
+CI,Health Care,Health Care Services,2026-01-07T13:10:16.321436+00:00
+CINF,Financials,Property & Casualty Insurance,2026-01-07T13:10:16.321436+00:00
+CL,Consumer Staples,Household Products,2026-01-07T13:10:16.321436+00:00
+CLX,Consumer Staples,Household Products,2026-01-07T13:10:16.321436+00:00
+CMCSA,Communication Services,Cable & Satellite,2026-01-07T13:10:16.321436+00:00
+CME,Financials,Financial Exchanges & Data,2026-01-07T13:10:16.321436+00:00
+CMG,Consumer Discretionary,Restaurants,2026-01-07T13:10:16.321436+00:00
+CMI,Industrials,Construction Machinery & Heavy Transportation Equipment,2026-01-07T13:10:16.321436+00:00
+CMS,Utilities,Multi-Utilities,2026-01-07T13:10:16.321436+00:00
+CNC,Health Care,Managed Health Care,2026-01-07T13:10:16.321436+00:00
+CNP,Utilities,Multi-Utilities,2026-01-07T13:10:16.321436+00:00
+COF,Financials,Consumer Finance,2026-01-07T13:10:16.321436+00:00
+COIN,Financials,Financial Exchanges & Data,2026-01-07T13:10:16.321436+00:00
+COO,Health Care,Health Care Supplies,2026-01-07T13:10:16.321436+00:00
+COP,Energy,Oil & Gas Exploration & Production,2026-01-07T13:10:16.321436+00:00
+COR,Health Care,Health Care Distributors,2026-01-07T13:10:16.321436+00:00
+COST,Consumer Staples,Consumer Staples Merchandise Retail,2026-01-07T13:10:16.321436+00:00
+CPAY,Financials,Transaction & Payment Processing Services,2026-01-07T13:10:16.321436+00:00
+CPB,Consumer Staples,Packaged Foods & Meats,2026-01-07T13:10:16.321436+00:00
+CPRT,Industrials,Diversified Support Services,2026-01-07T13:10:16.321436+00:00
+CPT,Real Estate,Multi-Family Residential REITs,2026-01-07T13:10:16.321436+00:00
+CRH,Materials,Construction Materials,2026-01-07T13:10:16.321436+00:00
+CRL,Health Care,Life Sciences Tools & Services,2026-01-07T13:10:16.321436+00:00
+CRM,Information Technology,Application Software,2026-01-07T13:10:16.321436+00:00
+CRWD,Information Technology,Systems Software,2026-01-07T13:10:16.321436+00:00
+CSCO,Information Technology,Communications Equipment,2026-01-07T13:10:16.321436+00:00
+CSGP,Real Estate,Real Estate Services,2026-01-07T13:10:16.321436+00:00
+CSX,Industrials,Rail Transportation,2026-01-07T13:10:16.321436+00:00
+CTAS,Industrials,Diversified Support Services,2026-01-07T13:10:16.321436+00:00
+CTRA,Energy,Oil & Gas Exploration & Production,2026-01-07T13:10:16.321436+00:00
+CTSH,Information Technology,IT Consulting & Other Services,2026-01-07T13:10:16.321436+00:00
+CTVA,Materials,Fertilizers & Agricultural Chemicals,2026-01-07T13:10:16.321436+00:00
+CVNA,Consumer Discretionary,Automotive Retail,2026-01-07T13:10:16.321436+00:00
+CVS,Health Care,Health Care Services,2026-01-07T13:10:16.321436+00:00
+CVX,Energy,Integrated Oil & Gas,2026-01-07T13:10:16.321436+00:00
+D,Utilities,Multi-Utilities,2026-01-07T13:10:16.321436+00:00
+DAL,Industrials,Passenger Airlines,2026-01-07T13:10:16.321436+00:00
+DASH,Consumer Discretionary,Specialized Consumer Services,2026-01-07T13:10:16.321436+00:00
+DAY,Industrials,Human Resource & Employment Services,2026-01-07T13:10:16.321436+00:00
+DD,Materials,Specialty Chemicals,2026-01-07T13:10:16.321436+00:00
+DDOG,Information Technology,Application Software,2026-01-07T13:10:16.321436+00:00
+DE,Industrials,Agricultural & Farm Machinery,2026-01-07T13:10:16.321436+00:00
+DECK,Consumer Discretionary,Footwear,2026-01-07T13:10:16.321436+00:00
+DELL,Information Technology,"Technology Hardware, Storage & Peripherals",2026-01-07T13:10:16.321436+00:00
+DG,Consumer Staples,Consumer Staples Merchandise Retail,2026-01-07T13:10:16.321436+00:00
+DGX,Health Care,Health Care Services,2026-01-07T13:10:16.321436+00:00
+DHI,Consumer Discretionary,Homebuilding,2026-01-07T13:10:16.321436+00:00
+DHR,Health Care,Life Sciences Tools & Services,2026-01-07T13:10:16.321436+00:00
+DIS,Communication Services,Movies & Entertainment,2026-01-07T13:10:16.321436+00:00
+DLR,Real Estate,Data Center REITs,2026-01-07T13:10:16.321436+00:00
+DLTR,Consumer Staples,Consumer Staples Merchandise Retail,2026-01-07T13:10:16.321436+00:00
+DOC,Real Estate,Health Care REITs,2026-01-07T13:10:16.321436+00:00
+DOV,Industrials,Industrial Machinery & Supplies & Components,2026-01-07T13:10:16.321436+00:00
+DOW,Materials,Commodity Chemicals,2026-01-07T13:10:16.321436+00:00
+DPZ,Consumer Discretionary,Restaurants,2026-01-07T13:10:16.321436+00:00
+DRI,Consumer Discretionary,Restaurants,2026-01-07T13:10:16.321436+00:00
+DTE,Utilities,Multi-Utilities,2026-01-07T13:10:16.321436+00:00
+DUK,Utilities,Electric Utilities,2026-01-07T13:10:16.321436+00:00
+DVA,Health Care,Health Care Services,2026-01-07T13:10:16.321436+00:00
+DVN,Energy,Oil & Gas Exploration & Production,2026-01-07T13:10:16.321436+00:00
+DXCM,Health Care,Health Care Equipment,2026-01-07T13:10:16.321436+00:00
+EA,Communication Services,Interactive Home Entertainment,2026-01-07T13:10:16.321436+00:00
+EBAY,Consumer Discretionary,Broadline Retail,2026-01-07T13:10:16.321436+00:00
+ECL,Materials,Specialty Chemicals,2026-01-07T13:10:16.321436+00:00
+ED,Utilities,Multi-Utilities,2026-01-07T13:10:16.321436+00:00
+EFX,Industrials,Research & Consulting Services,2026-01-07T13:10:16.321436+00:00
+EG,Financials,Reinsurance,2026-01-07T13:10:16.321436+00:00
+EIX,Utilities,Electric Utilities,2026-01-07T13:10:16.321436+00:00
+EL,Consumer Staples,Personal Care Products,2026-01-07T13:10:16.321436+00:00
+ELV,Health Care,Managed Health Care,2026-01-07T13:10:16.321436+00:00
+EME,Industrials,Construction & Engineering,2026-01-07T13:10:16.321436+00:00
+EMR,Industrials,Electrical Components & Equipment,2026-01-07T13:10:16.321436+00:00
+EOG,Energy,Oil & Gas Exploration & Production,2026-01-07T13:10:16.321436+00:00
+EPAM,Information Technology,IT Consulting & Other Services,2026-01-07T13:10:16.321436+00:00
+EQIX,Real Estate,Data Center REITs,2026-01-07T13:10:16.321436+00:00
+EQR,Real Estate,Multi-Family Residential REITs,2026-01-07T13:10:16.321436+00:00
+EQT,Energy,Oil & Gas Exploration & Production,2026-01-07T13:10:16.321436+00:00
+ERIE,Financials,Insurance Brokers,2026-01-07T13:10:16.321436+00:00
+ES,Utilities,Electric Utilities,2026-01-07T13:10:16.321436+00:00
+ESS,Real Estate,Multi-Family Residential REITs,2026-01-07T13:10:16.321436+00:00
+ETN,Industrials,Electrical Components & Equipment,2026-01-07T13:10:16.321436+00:00
+ETR,Utilities,Electric Utilities,2026-01-07T13:10:16.321436+00:00
+EVRG,Utilities,Electric Utilities,2026-01-07T13:10:16.321436+00:00
+EW,Health Care,Health Care Equipment,2026-01-07T13:10:16.321436+00:00
+EXC,Utilities,Electric Utilities,2026-01-07T13:10:16.321436+00:00
+EXE,Energy,Oil & Gas Exploration & Production,2026-01-07T13:10:16.321436+00:00
+EXPD,Industrials,Air Freight & Logistics,2026-01-07T13:10:16.321436+00:00
+EXPE,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",2026-01-07T13:10:16.321436+00:00
+EXR,Real Estate,Self-Storage REITs,2026-01-07T13:10:16.321436+00:00
+F,Consumer Discretionary,Automobile Manufacturers,2026-01-07T13:10:16.321436+00:00
+FANG,Energy,Oil & Gas Exploration & Production,2026-01-07T13:10:16.321436+00:00
+FAST,Industrials,Trading Companies & Distributors,2026-01-07T13:10:16.321436+00:00
+FCX,Materials,Copper,2026-01-07T13:10:16.321436+00:00
+FDS,Financials,Financial Exchanges & Data,2026-01-07T13:10:16.321436+00:00
+FDX,Industrials,Air Freight & Logistics,2026-01-07T13:10:16.321436+00:00
+FE,Utilities,Electric Utilities,2026-01-07T13:10:16.321436+00:00
+FFIV,Information Technology,Communications Equipment,2026-01-07T13:10:16.321436+00:00
+FICO,Information Technology,Application Software,2026-01-07T13:10:16.321436+00:00
+FIS,Financials,Transaction & Payment Processing Services,2026-01-07T13:10:16.321436+00:00
+FISV,Financials,Transaction & Payment Processing Services,2026-01-07T13:10:16.321436+00:00
+FITB,Financials,Regional Banks,2026-01-07T13:10:16.321436+00:00
+FIX,Industrials,Construction & Engineering,2026-01-07T13:10:16.321436+00:00
+FOX,Communication Services,Broadcasting,2026-01-07T13:10:16.321436+00:00
+FOXA,Communication Services,Broadcasting,2026-01-07T13:10:16.321436+00:00
+FRT,Real Estate,Retail REITs,2026-01-07T13:10:16.321436+00:00
+FSLR,Information Technology,Semiconductors,2026-01-07T13:10:16.321436+00:00
+FTNT,Information Technology,Systems Software,2026-01-07T13:10:16.321436+00:00
+FTV,Industrials,Industrial Machinery & Supplies & Components,2026-01-07T13:10:16.321436+00:00
+GD,Industrials,Aerospace & Defense,2026-01-07T13:10:16.321436+00:00
+GDDY,Information Technology,Internet Services & Infrastructure,2026-01-07T13:10:16.321436+00:00
+GE,Industrials,Aerospace & Defense,2026-01-07T13:10:16.321436+00:00
+GEHC,Health Care,Health Care Equipment,2026-01-07T13:10:16.321436+00:00
+GEN,Information Technology,Systems Software,2026-01-07T13:10:16.321436+00:00
+GEV,Industrials,Heavy Electrical Equipment,2026-01-07T13:10:16.321436+00:00
+GILD,Health Care,Biotechnology,2026-01-07T13:10:16.321436+00:00
+GIS,Consumer Staples,Packaged Foods & Meats,2026-01-07T13:10:16.321436+00:00
+GL,Financials,Life & Health Insurance,2026-01-07T13:10:16.321436+00:00
+GLW,Information Technology,Electronic Components,2026-01-07T13:10:16.321436+00:00
+GM,Consumer Discretionary,Automobile Manufacturers,2026-01-07T13:10:16.321436+00:00
+GNRC,Industrials,Electrical Components & Equipment,2026-01-07T13:10:16.321436+00:00
+GOOG,Communication Services,Interactive Media & Services,2026-01-07T13:10:16.321436+00:00
+GOOGL,Communication Services,Interactive Media & Services,2026-01-07T13:10:16.321436+00:00
+GPC,Consumer Discretionary,Distributors,2026-01-07T13:10:16.321436+00:00
+GPN,Financials,Transaction & Payment Processing Services,2026-01-07T13:10:16.321436+00:00
+GRMN,Consumer Discretionary,Consumer Electronics,2026-01-07T13:10:16.321436+00:00
+GS,Financials,Investment Banking & Brokerage,2026-01-07T13:10:16.321436+00:00
+GWW,Industrials,Industrial Machinery & Supplies & Components,2026-01-07T13:10:16.321436+00:00
+HAL,Energy,Oil & Gas Equipment & Services,2026-01-07T13:10:16.321436+00:00
+HAS,Consumer Discretionary,Leisure Products,2026-01-07T13:10:16.321436+00:00
+HBAN,Financials,Regional Banks,2026-01-07T13:10:16.321436+00:00
+HCA,Health Care,Health Care Facilities,2026-01-07T13:10:16.321436+00:00
+HD,Consumer Discretionary,Home Improvement Retail,2026-01-07T13:10:16.321436+00:00
+HIG,Financials,Property & Casualty Insurance,2026-01-07T13:10:16.321436+00:00
+HII,Industrials,Aerospace & Defense,2026-01-07T13:10:16.321436+00:00
+HLT,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",2026-01-07T13:10:16.321436+00:00
+HOLX,Health Care,Health Care Equipment,2026-01-07T13:10:16.321436+00:00
+HON,Industrials,Industrial Conglomerates,2026-01-07T13:10:16.321436+00:00
+HOOD,Financials,Investment Banking & Brokerage,2026-01-07T13:10:16.321436+00:00
+HPE,Information Technology,"Technology Hardware, Storage & Peripherals",2026-01-07T13:10:16.321436+00:00
+HPQ,Information Technology,"Technology Hardware, Storage & Peripherals",2026-01-07T13:10:16.321436+00:00
+HRL,Consumer Staples,Packaged Foods & Meats,2026-01-07T13:10:16.321436+00:00
+HSIC,Health Care,Health Care Distributors,2026-01-07T13:10:16.321436+00:00
+HST,Real Estate,Hotel & Resort REITs,2026-01-07T13:10:16.321436+00:00
+HSY,Consumer Staples,Packaged Foods & Meats,2026-01-07T13:10:16.321436+00:00
+HUBB,Industrials,Industrial Machinery & Supplies & Components,2026-01-07T13:10:16.321436+00:00
+HUM,Health Care,Managed Health Care,2026-01-07T13:10:16.321436+00:00
+HWM,Industrials,Aerospace & Defense,2026-01-07T13:10:16.321436+00:00
+IBKR,Financials,Investment Banking & Brokerage,2026-01-07T13:10:16.321436+00:00
+IBM,Information Technology,IT Consulting & Other Services,2026-01-07T13:10:16.321436+00:00
+ICE,Financials,Financial Exchanges & Data,2026-01-07T13:10:16.321436+00:00
+IDXX,Health Care,Health Care Equipment,2026-01-07T13:10:16.321436+00:00
+IEX,Industrials,Industrial Machinery & Supplies & Components,2026-01-07T13:10:16.321436+00:00
+IFF,Materials,Specialty Chemicals,2026-01-07T13:10:16.321436+00:00
+INCY,Health Care,Biotechnology,2026-01-07T13:10:16.321436+00:00
+INTC,Information Technology,Semiconductors,2026-01-07T13:10:16.321436+00:00
+INTU,Information Technology,Application Software,2026-01-07T13:10:16.321436+00:00
+INVH,Real Estate,Single-Family Residential REITs,2026-01-07T13:10:16.321436+00:00
+IP,Materials,Paper & Plastic Packaging Products & Materials,2026-01-07T13:10:16.321436+00:00
+IQV,Health Care,Life Sciences Tools & Services,2026-01-07T13:10:16.321436+00:00
+IR,Industrials,Industrial Machinery & Supplies & Components,2026-01-07T13:10:16.321436+00:00
+IRM,Real Estate,Other Specialized REITs,2026-01-07T13:10:16.321436+00:00
+ISRG,Health Care,Health Care Equipment,2026-01-07T13:10:16.321436+00:00
+IT,Information Technology,IT Consulting & Other Services,2026-01-07T13:10:16.321436+00:00
+ITW,Industrials,Industrial Machinery & Supplies & Components,2026-01-07T13:10:16.321436+00:00
+IVZ,Financials,Asset Management & Custody Banks,2026-01-07T13:10:16.321436+00:00
+J,Industrials,Construction & Engineering,2026-01-07T13:10:16.321436+00:00
+JBHT,Industrials,Cargo Ground Transportation,2026-01-07T13:10:16.321436+00:00
+JBL,Information Technology,Electronic Manufacturing Services,2026-01-07T13:10:16.321436+00:00
+JCI,Industrials,Building Products,2026-01-07T13:10:16.321436+00:00
+JKHY,Financials,Transaction & Payment Processing Services,2026-01-07T13:10:16.321436+00:00
+JNJ,Health Care,Pharmaceuticals,2026-01-07T13:10:16.321436+00:00
+JPM,Financials,Diversified Banks,2026-01-07T13:10:16.321436+00:00
+KDP,Consumer Staples,Soft Drinks & Non-alcoholic Beverages,2026-01-07T13:10:16.321436+00:00
+KEY,Financials,Regional Banks,2026-01-07T13:10:16.321436+00:00
+KEYS,Information Technology,Electronic Equipment & Instruments,2026-01-07T13:10:16.321436+00:00
+KHC,Consumer Staples,Packaged Foods & Meats,2026-01-07T13:10:16.321436+00:00
+KIM,Real Estate,Retail REITs,2026-01-07T13:10:16.321436+00:00
+KKR,Financials,Asset Management & Custody Banks,2026-01-07T13:10:16.321436+00:00
+KLAC,Information Technology,Semiconductor Materials & Equipment,2026-01-07T13:10:16.321436+00:00
+KMB,Consumer Staples,Household Products,2026-01-07T13:10:16.321436+00:00
+KMI,Energy,Oil & Gas Storage & Transportation,2026-01-07T13:10:16.321436+00:00
+KO,Consumer Staples,Soft Drinks & Non-alcoholic Beverages,2026-01-07T13:10:16.321436+00:00
+KR,Consumer Staples,Food Retail,2026-01-07T13:10:16.321436+00:00
+KVUE,Consumer Staples,Personal Care Products,2026-01-07T13:10:16.321436+00:00
+L,Financials,Multi-line Insurance,2026-01-07T13:10:16.321436+00:00
+LDOS,Industrials,Diversified Support Services,2026-01-07T13:10:16.321436+00:00
+LEN,Consumer Discretionary,Homebuilding,2026-01-07T13:10:16.321436+00:00
+LH,Health Care,Health Care Services,2026-01-07T13:10:16.321436+00:00
+LHX,Industrials,Aerospace & Defense,2026-01-07T13:10:16.321436+00:00
+LII,Industrials,Building Products,2026-01-07T13:10:16.321436+00:00
+LIN,Materials,Industrial Gases,2026-01-07T13:10:16.321436+00:00
+LLY,Health Care,Pharmaceuticals,2026-01-07T13:10:16.321436+00:00
+LMT,Industrials,Aerospace & Defense,2026-01-07T13:10:16.321436+00:00
+LNT,Utilities,Electric Utilities,2026-01-07T13:10:16.321436+00:00
+LOW,Consumer Discretionary,Home Improvement Retail,2026-01-07T13:10:16.321436+00:00
+LRCX,Information Technology,Semiconductor Materials & Equipment,2026-01-07T13:10:16.321436+00:00
+LULU,Consumer Discretionary,"Apparel, Accessories & Luxury Goods",2026-01-07T13:10:16.321436+00:00
+LUV,Industrials,Passenger Airlines,2026-01-07T13:10:16.321436+00:00
+LVS,Consumer Discretionary,Casinos & Gaming,2026-01-07T13:10:16.321436+00:00
+LW,Consumer Staples,Packaged Foods & Meats,2026-01-07T13:10:16.321436+00:00
+LYB,Materials,Specialty Chemicals,2026-01-07T13:10:16.321436+00:00
+LYV,Communication Services,Movies & Entertainment,2026-01-07T13:10:16.321436+00:00
+MA,Financials,Transaction & Payment Processing Services,2026-01-07T13:10:16.321436+00:00
+MAA,Real Estate,Multi-Family Residential REITs,2026-01-07T13:10:16.321436+00:00
+MAR,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",2026-01-07T13:10:16.321436+00:00
+MAS,Industrials,Building Products,2026-01-07T13:10:16.321436+00:00
+MCD,Consumer Discretionary,Restaurants,2026-01-07T13:10:16.321436+00:00
+MCHP,Information Technology,Semiconductors,2026-01-07T13:10:16.321436+00:00
+MCK,Health Care,Health Care Distributors,2026-01-07T13:10:16.321436+00:00
+MCO,Financials,Financial Exchanges & Data,2026-01-07T13:10:16.321436+00:00
+MDLZ,Consumer Staples,Packaged Foods & Meats,2026-01-07T13:10:16.321436+00:00
+MDT,Health Care,Health Care Equipment,2026-01-07T13:10:16.321436+00:00
+MET,Financials,Life & Health Insurance,2026-01-07T13:10:16.321436+00:00
+META,Communication Services,Interactive Media & Services,2026-01-07T13:10:16.321436+00:00
+MGM,Consumer Discretionary,Casinos & Gaming,2026-01-07T13:10:16.321436+00:00
+MKC,Consumer Staples,Packaged Foods & Meats,2026-01-07T13:10:16.321436+00:00
+MLM,Materials,Construction Materials,2026-01-07T13:10:16.321436+00:00
+MMC,Financials,Insurance Brokers,2026-01-07T13:10:16.321436+00:00
+MMM,Industrials,Industrial Conglomerates,2026-01-07T13:10:16.321436+00:00
+MNST,Consumer Staples,Soft Drinks & Non-alcoholic Beverages,2026-01-07T13:10:16.321436+00:00
+MO,Consumer Staples,Tobacco,2026-01-07T13:10:16.321436+00:00
+MOH,Health Care,Managed Health Care,2026-01-07T13:10:16.321436+00:00
+MOS,Materials,Fertilizers & Agricultural Chemicals,2026-01-07T13:10:16.321436+00:00
+MPC,Energy,Oil & Gas Refining & Marketing,2026-01-07T13:10:16.321436+00:00
+MPWR,Information Technology,Semiconductors,2026-01-07T13:10:16.321436+00:00
+MRK,Health Care,Pharmaceuticals,2026-01-07T13:10:16.321436+00:00
+MRNA,Health Care,Biotechnology,2026-01-07T13:10:16.321436+00:00
+MS,Financials,Investment Banking & Brokerage,2026-01-07T13:10:16.321436+00:00
+MSCI,Financials,Financial Exchanges & Data,2026-01-07T13:10:16.321436+00:00
+MSFT,Information Technology,Systems Software,2026-01-07T13:10:16.321436+00:00
+MSI,Information Technology,Communications Equipment,2026-01-07T13:10:16.321436+00:00
+MTB,Financials,Regional Banks,2026-01-07T13:10:16.321436+00:00
+MTCH,Communication Services,Interactive Media & Services,2026-01-07T13:10:16.321436+00:00
+MTD,Health Care,Life Sciences Tools & Services,2026-01-07T13:10:16.321436+00:00
+MU,Information Technology,Semiconductors,2026-01-07T13:10:16.321436+00:00
+NCLH,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",2026-01-07T13:10:16.321436+00:00
+NDAQ,Financials,Financial Exchanges & Data,2026-01-07T13:10:16.321436+00:00
+NDSN,Industrials,Industrial Machinery & Supplies & Components,2026-01-07T13:10:16.321436+00:00
+NEE,Utilities,Multi-Utilities,2026-01-07T13:10:16.321436+00:00
+NEM,Materials,Gold,2026-01-07T13:10:16.321436+00:00
+NFLX,Communication Services,Movies & Entertainment,2026-01-07T13:10:16.321436+00:00
+NI,Utilities,Multi-Utilities,2026-01-07T13:10:16.321436+00:00
+NKE,Consumer Discretionary,"Apparel, Accessories & Luxury Goods",2026-01-07T13:10:16.321436+00:00
+NOC,Industrials,Aerospace & Defense,2026-01-07T13:10:16.321436+00:00
+NOW,Information Technology,Systems Software,2026-01-07T13:10:16.321436+00:00
+NRG,Utilities,Independent Power Producers & Energy Traders,2026-01-07T13:10:16.321436+00:00
+NSC,Industrials,Rail Transportation,2026-01-07T13:10:16.321436+00:00
+NTAP,Information Technology,"Technology Hardware, Storage & Peripherals",2026-01-07T13:10:16.321436+00:00
+NTRS,Financials,Asset Management & Custody Banks,2026-01-07T13:10:16.321436+00:00
+NUE,Materials,Steel,2026-01-07T13:10:16.321436+00:00
+NVDA,Information Technology,Semiconductors,2026-01-07T13:10:16.321436+00:00
+NVR,Consumer Discretionary,Homebuilding,2026-01-07T13:10:16.321436+00:00
+NWS,Communication Services,Publishing,2026-01-07T13:10:16.321436+00:00
+NWSA,Communication Services,Publishing,2026-01-07T13:10:16.321436+00:00
+NXPI,Information Technology,Semiconductors,2026-01-07T13:10:16.321436+00:00
+O,Real Estate,Retail REITs,2026-01-07T13:10:16.321436+00:00
+ODFL,Industrials,Cargo Ground Transportation,2026-01-07T13:10:16.321436+00:00
+OKE,Energy,Oil & Gas Storage & Transportation,2026-01-07T13:10:16.321436+00:00
+OMC,Communication Services,Advertising,2026-01-07T13:10:16.321436+00:00
+ON,Information Technology,Semiconductors,2026-01-07T13:10:16.321436+00:00
+ORCL,Information Technology,Application Software,2026-01-07T13:10:16.321436+00:00
+ORLY,Consumer Discretionary,Automotive Retail,2026-01-07T13:10:16.321436+00:00
+OTIS,Industrials,Industrial Machinery & Supplies & Components,2026-01-07T13:10:16.321436+00:00
+OXY,Energy,Oil & Gas Exploration & Production,2026-01-07T13:10:16.321436+00:00
+PANW,Information Technology,Systems Software,2026-01-07T13:10:16.321436+00:00
+PAYC,Industrials,Human Resource & Employment Services,2026-01-07T13:10:16.321436+00:00
+PAYX,Industrials,Human Resource & Employment Services,2026-01-07T13:10:16.321436+00:00
+PCAR,Industrials,Construction Machinery & Heavy Transportation Equipment,2026-01-07T13:10:16.321436+00:00
+PCG,Utilities,Multi-Utilities,2026-01-07T13:10:16.321436+00:00
+PEG,Utilities,Electric Utilities,2026-01-07T13:10:16.321436+00:00
+PEP,Consumer Staples,Soft Drinks & Non-alcoholic Beverages,2026-01-07T13:10:16.321436+00:00
+PFE,Health Care,Pharmaceuticals,2026-01-07T13:10:16.321436+00:00
+PFG,Financials,Life & Health Insurance,2026-01-07T13:10:16.321436+00:00
+PG,Consumer Staples,Personal Care Products,2026-01-07T13:10:16.321436+00:00
+PGR,Financials,Property & Casualty Insurance,2026-01-07T13:10:16.321436+00:00
+PH,Industrials,Industrial Machinery & Supplies & Components,2026-01-07T13:10:16.321436+00:00
+PHM,Consumer Discretionary,Homebuilding,2026-01-07T13:10:16.321436+00:00
+PKG,Materials,Paper & Plastic Packaging Products & Materials,2026-01-07T13:10:16.321436+00:00
+PLD,Real Estate,Industrial REITs,2026-01-07T13:10:16.321436+00:00
+PLTR,Information Technology,Application Software,2026-01-07T13:10:16.321436+00:00
+PM,Consumer Staples,Tobacco,2026-01-07T13:10:16.321436+00:00
+PNC,Financials,Diversified Banks,2026-01-07T13:10:16.321436+00:00
+PNR,Industrials,Industrial Machinery & Supplies & Components,2026-01-07T13:10:16.321436+00:00
+PNW,Utilities,Multi-Utilities,2026-01-07T13:10:16.321436+00:00
+PODD,Health Care,Health Care Equipment,2026-01-07T13:10:16.321436+00:00
+POOL,Consumer Discretionary,Distributors,2026-01-07T13:10:16.321436+00:00
+PPG,Materials,Specialty Chemicals,2026-01-07T13:10:16.321436+00:00
+PPL,Utilities,Electric Utilities,2026-01-07T13:10:16.321436+00:00
+PRU,Financials,Life & Health Insurance,2026-01-07T13:10:16.321436+00:00
+PSA,Real Estate,Self-Storage REITs,2026-01-07T13:10:16.321436+00:00
+PSKY,Communication Services,Movies & Entertainment,2026-01-07T13:10:16.321436+00:00
+PSX,Energy,Oil & Gas Refining & Marketing,2026-01-07T13:10:16.321436+00:00
+PTC,Information Technology,Application Software,2026-01-07T13:10:16.321436+00:00
+PWR,Industrials,Construction & Engineering,2026-01-07T13:10:16.321436+00:00
+PYPL,Financials,Transaction & Payment Processing Services,2026-01-07T13:10:16.321436+00:00
+Q,Information Technology,Semiconductor Materials & Equipment,2026-01-07T13:10:16.321436+00:00
+QCOM,Information Technology,Semiconductors,2026-01-07T13:10:16.321436+00:00
+RCL,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",2026-01-07T13:10:16.321436+00:00
+REG,Real Estate,Retail REITs,2026-01-07T13:10:16.321436+00:00
+REGN,Health Care,Biotechnology,2026-01-07T13:10:16.321436+00:00
+RF,Financials,Regional Banks,2026-01-07T13:10:16.321436+00:00
+RJF,Financials,Investment Banking & Brokerage,2026-01-07T13:10:16.321436+00:00
+RL,Consumer Discretionary,"Apparel, Accessories & Luxury Goods",2026-01-07T13:10:16.321436+00:00
+RMD,Health Care,Health Care Equipment,2026-01-07T13:10:16.321436+00:00
+ROK,Industrials,Electrical Components & Equipment,2026-01-07T13:10:16.321436+00:00
+ROL,Industrials,Environmental & Facilities Services,2026-01-07T13:10:16.321436+00:00
+ROP,Information Technology,Electronic Equipment & Instruments,2026-01-07T13:10:16.321436+00:00
+ROST,Consumer Discretionary,Apparel Retail,2026-01-07T13:10:16.321436+00:00
+RSG,Industrials,Environmental & Facilities Services,2026-01-07T13:10:16.321436+00:00
+RTX,Industrials,Aerospace & Defense,2026-01-07T13:10:16.321436+00:00
+RVTY,Health Care,Health Care Equipment,2026-01-07T13:10:16.321436+00:00
+SBAC,Real Estate,Telecom Tower REITs,2026-01-07T13:10:16.321436+00:00
+SBUX,Consumer Discretionary,Restaurants,2026-01-07T13:10:16.321436+00:00
+SCHW,Financials,Investment Banking & Brokerage,2026-01-07T13:10:16.321436+00:00
+SHW,Materials,Specialty Chemicals,2026-01-07T13:10:16.321436+00:00
+SJM,Consumer Staples,Packaged Foods & Meats,2026-01-07T13:10:16.321436+00:00
+SLB,Energy,Oil & Gas Equipment & Services,2026-01-07T13:10:16.321436+00:00
+SMCI,Information Technology,"Technology Hardware, Storage & Peripherals",2026-01-07T13:10:16.321436+00:00
+SNA,Industrials,Industrial Machinery & Supplies & Components,2026-01-07T13:10:16.321436+00:00
+SNDK,Information Technology,"Technology Hardware, Storage & Peripherals",2026-01-07T13:10:16.321436+00:00
+SNPS,Information Technology,Application Software,2026-01-07T13:10:16.321436+00:00
+SO,Utilities,Electric Utilities,2026-01-07T13:10:16.321436+00:00
+SOLV,Health Care,Health Care Technology,2026-01-07T13:10:16.321436+00:00
+SPG,Real Estate,Retail REITs,2026-01-07T13:10:16.321436+00:00
+SPGI,Financials,Financial Exchanges & Data,2026-01-07T13:10:16.321436+00:00
+SRE,Utilities,Multi-Utilities,2026-01-07T13:10:16.321436+00:00
+STE,Health Care,Health Care Equipment,2026-01-07T13:10:16.321436+00:00
+STLD,Materials,Steel,2026-01-07T13:10:16.321436+00:00
+STT,Financials,Asset Management & Custody Banks,2026-01-07T13:10:16.321436+00:00
+STX,Information Technology,"Technology Hardware, Storage & Peripherals",2026-01-07T13:10:16.321436+00:00
+STZ,Consumer Staples,Distillers & Vintners,2026-01-07T13:10:16.321436+00:00
+SW,Materials,Paper & Plastic Packaging Products & Materials,2026-01-07T13:10:16.321436+00:00
+SWK,Industrials,Industrial Machinery & Supplies & Components,2026-01-07T13:10:16.321436+00:00
+SWKS,Information Technology,Semiconductors,2026-01-07T13:10:16.321436+00:00
+SYF,Financials,Consumer Finance,2026-01-07T13:10:16.321436+00:00
+SYK,Health Care,Health Care Equipment,2026-01-07T13:10:16.321436+00:00
+SYY,Consumer Staples,Food Distributors,2026-01-07T13:10:16.321436+00:00
+T,Communication Services,Integrated Telecommunication Services,2026-01-07T13:10:16.321436+00:00
+TAP,Consumer Staples,Brewers,2026-01-07T13:10:16.321436+00:00
+TDG,Industrials,Aerospace & Defense,2026-01-07T13:10:16.321436+00:00
+TDY,Information Technology,Electronic Equipment & Instruments,2026-01-07T13:10:16.321436+00:00
+TECH,Health Care,Life Sciences Tools & Services,2026-01-07T13:10:16.321436+00:00
+TEL,Information Technology,Electronic Manufacturing Services,2026-01-07T13:10:16.321436+00:00
+TER,Information Technology,Semiconductor Materials & Equipment,2026-01-07T13:10:16.321436+00:00
+TFC,Financials,Diversified Banks,2026-01-07T13:10:16.321436+00:00
+TGT,Consumer Staples,Consumer Staples Merchandise Retail,2026-01-07T13:10:16.321436+00:00
+TJX,Consumer Discretionary,Apparel Retail,2026-01-07T13:10:16.321436+00:00
+TKO,Communication Services,Movies & Entertainment,2026-01-07T13:10:16.321436+00:00
+TMO,Health Care,Life Sciences Tools & Services,2026-01-07T13:10:16.321436+00:00
+TMUS,Communication Services,Wireless Telecommunication Services,2026-01-07T13:10:16.321436+00:00
+TPL,Energy,Oil & Gas Exploration & Production,2026-01-07T13:10:16.321436+00:00
+TPR,Consumer Discretionary,"Apparel, Accessories & Luxury Goods",2026-01-07T13:10:16.321436+00:00
+TRGP,Energy,Oil & Gas Storage & Transportation,2026-01-07T13:10:16.321436+00:00
+TRMB,Information Technology,Electronic Equipment & Instruments,2026-01-07T13:10:16.321436+00:00
+TROW,Financials,Asset Management & Custody Banks,2026-01-07T13:10:16.321436+00:00
+TRV,Financials,Property & Casualty Insurance,2026-01-07T13:10:16.321436+00:00
+TSCO,Consumer Discretionary,Other Specialty Retail,2026-01-07T13:10:16.321436+00:00
+TSLA,Consumer Discretionary,Automobile Manufacturers,2026-01-07T13:10:16.321436+00:00
+TSN,Consumer Staples,Packaged Foods & Meats,2026-01-07T13:10:16.321436+00:00
+TT,Industrials,Building Products,2026-01-07T13:10:16.321436+00:00
+TTD,Communication Services,Advertising,2026-01-07T13:10:16.321436+00:00
+TTWO,Communication Services,Interactive Home Entertainment,2026-01-07T13:10:16.321436+00:00
+TXN,Information Technology,Semiconductors,2026-01-07T13:10:16.321436+00:00
+TXT,Industrials,Aerospace & Defense,2026-01-07T13:10:16.321436+00:00
+TYL,Information Technology,Application Software,2026-01-07T13:10:16.321436+00:00
+UAL,Industrials,Passenger Airlines,2026-01-07T13:10:16.321436+00:00
+UBER,Industrials,Passenger Ground Transportation,2026-01-07T13:10:16.321436+00:00
+UDR,Real Estate,Multi-Family Residential REITs,2026-01-07T13:10:16.321436+00:00
+UHS,Health Care,Health Care Facilities,2026-01-07T13:10:16.321436+00:00
+ULTA,Consumer Discretionary,Other Specialty Retail,2026-01-07T13:10:16.321436+00:00
+UNH,Health Care,Managed Health Care,2026-01-07T13:10:16.321436+00:00
+UNP,Industrials,Rail Transportation,2026-01-07T13:10:16.321436+00:00
+UPS,Industrials,Air Freight & Logistics,2026-01-07T13:10:16.321436+00:00
+URI,Industrials,Trading Companies & Distributors,2026-01-07T13:10:16.321436+00:00
+USB,Financials,Diversified Banks,2026-01-07T13:10:16.321436+00:00
+V,Financials,Transaction & Payment Processing Services,2026-01-07T13:10:16.321436+00:00
+VICI,Real Estate,Hotel & Resort REITs,2026-01-07T13:10:16.321436+00:00
+VLO,Energy,Oil & Gas Refining & Marketing,2026-01-07T13:10:16.321436+00:00
+VLTO,Industrials,Environmental & Facilities Services,2026-01-07T13:10:16.321436+00:00
+VMC,Materials,Construction Materials,2026-01-07T13:10:16.321436+00:00
+VRSK,Industrials,Research & Consulting Services,2026-01-07T13:10:16.321436+00:00
+VRSN,Information Technology,Internet Services & Infrastructure,2026-01-07T13:10:16.321436+00:00
+VRTX,Health Care,Biotechnology,2026-01-07T13:10:16.321436+00:00
+VST,Utilities,Electric Utilities,2026-01-07T13:10:16.321436+00:00
+VTR,Real Estate,Health Care REITs,2026-01-07T13:10:16.321436+00:00
+VTRS,Health Care,Pharmaceuticals,2026-01-07T13:10:16.321436+00:00
+VZ,Communication Services,Integrated Telecommunication Services,2026-01-07T13:10:16.321436+00:00
+WAB,Industrials,Construction Machinery & Heavy Transportation Equipment,2026-01-07T13:10:16.321436+00:00
+WAT,Health Care,Life Sciences Tools & Services,2026-01-07T13:10:16.321436+00:00
+WBD,Communication Services,Broadcasting,2026-01-07T13:10:16.321436+00:00
+WDAY,Information Technology,Application Software,2026-01-07T13:10:16.321436+00:00
+WDC,Information Technology,"Technology Hardware, Storage & Peripherals",2026-01-07T13:10:16.321436+00:00
+WEC,Utilities,Electric Utilities,2026-01-07T13:10:16.321436+00:00
+WELL,Real Estate,Health Care REITs,2026-01-07T13:10:16.321436+00:00
+WFC,Financials,Diversified Banks,2026-01-07T13:10:16.321436+00:00
+WM,Industrials,Environmental & Facilities Services,2026-01-07T13:10:16.321436+00:00
+WMB,Energy,Oil & Gas Storage & Transportation,2026-01-07T13:10:16.321436+00:00
+WMT,Consumer Staples,Consumer Staples Merchandise Retail,2026-01-07T13:10:16.321436+00:00
+WRB,Financials,Property & Casualty Insurance,2026-01-07T13:10:16.321436+00:00
+WSM,Consumer Discretionary,Homefurnishing Retail,2026-01-07T13:10:16.321436+00:00
+WST,Health Care,Health Care Supplies,2026-01-07T13:10:16.321436+00:00
+WTW,Financials,Insurance Brokers,2026-01-07T13:10:16.321436+00:00
+WY,Real Estate,Timber REITs,2026-01-07T13:10:16.321436+00:00
+WYNN,Consumer Discretionary,Casinos & Gaming,2026-01-07T13:10:16.321436+00:00
+XEL,Utilities,Multi-Utilities,2026-01-07T13:10:16.321436+00:00
+XOM,Energy,Integrated Oil & Gas,2026-01-07T13:10:16.321436+00:00
+XYL,Industrials,Industrial Machinery & Supplies & Components,2026-01-07T13:10:16.321436+00:00
+XYZ,Financials,Transaction & Payment Processing Services,2026-01-07T13:10:16.321436+00:00
+YUM,Consumer Discretionary,Restaurants,2026-01-07T13:10:16.321436+00:00
+ZBH,Health Care,Health Care Equipment,2026-01-07T13:10:16.321436+00:00
+ZBRA,Information Technology,Electronic Equipment & Instruments,2026-01-07T13:10:16.321436+00:00
+ZTS,Health Care,Pharmaceuticals,2026-01-07T13:10:16.321436+00:00

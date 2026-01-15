@@ -1,8 +1,9 @@
-
 import json
 import time
 import os
+import logging
 from datetime import datetime, timedelta
+from typing import List, Tuple
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -10,15 +11,18 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, NoSuchElementException, ElementClickInterceptedException
+from selenium.common.exceptions import TimeoutException
 from webdriver_manager.chrome import ChromeDriverManager
 
 class InvestingCalendarScraper:
     def __init__(self, headless=True):
         """
         初始化 InvestingCalendarScraper。
-        :param headless: 是否使用無頭模式。
+        包含 Log 設定與 Selenium WebDriver 設定。
         """
+        # 1. 設定 Log (這會建立 logs 資料夾並設定雙向輸出)
+        self.logger = self._setup_logger()
+        
         self.base_url = "https://hk.investing.com/economic-calendar/"
         options = Options()
         if headless:
@@ -26,32 +30,85 @@ class InvestingCalendarScraper:
         options.add_argument("--window-size=1920,1080")
         options.add_argument("--disable-gpu")
         options.add_argument("--no-sandbox")
-        options.add_argument("--disable-dev-shm-usage") # 解決資源限制問題
+        options.add_argument("--disable-dev-shm-usage")
         options.add_argument("--disable-extensions")
-        options.add_argument("--page-load-strategy=eager") # 不等待所有資源載入，加速
-        # 設定 User-Agent 以避免被輕易偵測
-        options.add_argument("user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36")
+        options.add_argument("--page-load-strategy=eager")
+        options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36")
         
-        # 使用 webdriver_manager 安裝並啟動 ChromeDriver
+        self.logger.info(f"啟動瀏覽器 (Headless: {headless})...")
         self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-        self.driver.set_page_load_timeout(30) # 設定頁面載入超時
+        self.driver.set_page_load_timeout(30)
         self.wait = WebDriverWait(self.driver, 10)
 
+    def _setup_logger(self):
+        """
+        設定 Logging 系統
+        - 輸出到 Console
+        - 輸出到 logs/scraper_YYYYMMDD_HHMMSS.log
+        """
+        # 取得專案根目錄
+        current_script_path = os.path.abspath(__file__)
+        project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_script_path)))
+        log_dir = os.path.join(project_root, "logs")
+
+        # 建立 logs 資料夾
+        if not os.path.exists(log_dir):
+            os.makedirs(log_dir)
+
+        # 建立 Logger
+        logger = logging.getLogger("InvestingScraper")
+        logger.setLevel(logging.INFO)
+        
+        # 清除舊的 handlers (避免重複 print)
+        if logger.hasHandlers():
+            logger.handlers.clear()
+
+        # Formatter
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+
+        # 1. File Handler (寫入檔案)
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        log_file = os.path.join(log_dir, f"scraper_{timestamp}.log")
+        file_handler = logging.FileHandler(log_file, encoding='utf-8')
+        file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
+
+        # 2. Stream Handler (輸出到螢幕)
+        stream_handler = logging.StreamHandler()
+        stream_handler.setFormatter(formatter)
+        logger.addHandler(stream_handler)
+        
+        # 雖然此時還沒 return，但這行會被寫入檔案
+        file_handler.stream.write(f"{datetime.now()} - INFO - Log 系統初始化完成，Log 檔路徑: {log_file}\n")
+        
+        print(f"Log 將儲存於: {log_file}") # 這是唯一保留的 print，確保使用者第一時間看到路徑
+        return logger
+
     def close(self):
-        """
-        關閉 WebDriver。
-        """
+        """關閉 WebDriver"""
         if self.driver:
+            self.logger.info("關閉瀏覽器...")
             self.driver.quit()
 
-    def run(self, start_date=None, end_date=None, target_countries=None):
-        """
-        主要執行方法。
-        :param start_date: 字串 'YYYY/MM/DD' (預設值: 今天)
-        :param end_date: 字串 'YYYY/MM/DD' (預設值: 今天 + 14 天)
-        :param target_countries: 字串列表
-        :return: 儲存檔案名稱
-        """
+    def _generate_date_chunks(self, start_date: str, end_date: str, interval_days: int) -> List[Tuple[str, str]]:
+        """輔助方法：將大日期範圍切分為多個小區段"""
+        start = datetime.strptime(start_date, "%Y-%m-%d")
+        end = datetime.strptime(end_date, "%Y-%m-%d")
+        chunks = []
+        
+        current = start
+        while current <= end:
+            chunk_end = current + timedelta(days=interval_days - 1)
+            if chunk_end > end:
+                chunk_end = end
+            
+            chunks.append((current.strftime("%Y-%m-%d"), chunk_end.strftime("%Y-%m-%d")))
+            current = chunk_end + timedelta(days=1)
+            
+        return chunks
+
+    def run(self, start_date=None, end_date=None, target_countries=None, interval_days=14):
+        """主要執行方法 (Master Loop)"""
         if start_date is None:
             start_date = datetime.now().strftime('%Y-%m-%d')
         if end_date is None:
@@ -59,31 +116,59 @@ class InvestingCalendarScraper:
         if target_countries is None:
             target_countries = ['歐盟區', '英國', '德國', '美國', '中國', '日本', '南韓', '新加坡', '台灣']
 
-        print(f"開始爬取任務: {start_date} 至 {end_date}")
+        self.logger.info(f"=== 啟動總任務: {start_date} 至 {end_date} (每 {interval_days} 天切分) ===")
         
+        generated_files = []
+        date_chunks = self._generate_date_chunks(start_date, end_date, interval_days)
+
         try:
             try:
                 self.driver.get(self.base_url)
             except TimeoutException:
-                print("頁面載入超時，嘗試繼續執行...")
+                self.logger.warning("頁面載入超時，嘗試繼續執行...")
                 self.driver.execute_script("window.stop();")
 
             self._handle_popup()
-            self._apply_filters(start_date, end_date, target_countries)
+            self._apply_country_filters(target_countries)
+
+            for idx, (s_date, e_date) in enumerate(date_chunks):
+                self.logger.info(f"--- 執行第 {idx+1}/{len(date_chunks)} 批次: {s_date} ~ {e_date} ---")
+                
+                filename = self._scrape_single_range(s_date, e_date)
+                if filename:
+                    generated_files.append(filename)
+                
+                time.sleep(2)
+
+            msg = f"總任務完成，共產生 {len(generated_files)} 個檔案。"
+            self.logger.info(msg)
+            return generated_files, msg
+
+        except Exception as e:
+            self.logger.error(f"總任務執行失敗: {e}", exc_info=True)
+            raise e
+        finally:
+            self.close()
+
+    def _scrape_single_range(self, start_date, end_date):
+        """執行單一日期區段的爬取"""
+        try:
+            self._apply_date_filters(start_date, end_date)
             self._scroll_to_load(end_date)
             data = self._parse_data(start_date, end_date)
             
-            # 轉換檔名格式 YYYY-MM-DD
             s_date_str = start_date.replace('/', '-')
             e_date_str = end_date.replace('/', '-')
             
-            output_dir = "output/invest_EC"
+            current_script_path = os.path.abspath(__file__)
+            project_root = os.path.dirname(os.path.dirname(os.path.dirname(current_script_path)))
+            output_dir = os.path.join(project_root, "output", "invest_EC")
+
             if not os.path.exists(output_dir):
                 os.makedirs(output_dir)
-                
-            filename = os.path.join(output_dir, f"{s_date_str}-{e_date_str}_Ecalendar.json")
-            
-            # 建構包含 metadata 的最終輸出
+
+            filename = os.path.join(output_dir, f"{s_date_str}_{e_date_str}_Ecalendar.json")
+
             final_output = {
                 "meta": {
                     "crawled_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -95,54 +180,35 @@ class InvestingCalendarScraper:
             }
             
             self._save_data(final_output, filename)
-            print(f"任務完成，資料已儲存至 {filename}")
-            return filename, final_output
-            
+            self.logger.info(f"批次存檔成功: {filename} (資料筆數: {len(data)})")
+            return filename
+
         except Exception as e:
-            print(f"執行過程中發生錯誤: {e}")
-            raise
-        finally:
-            self.close()
+            self.logger.error(f"批次 {start_date}~{end_date} 失敗: {e}")
+            return None
 
     def _handle_popup(self):
-        """
-        處理可能出現的蓋版彈窗 (PromoteSignUpPopUp)。
-        """
+        """處理彈窗"""
         try:
-            # 等待彈窗出現，最多 5 秒，因為不一定會出現
-            print("檢查是否有彈窗...")
-            popup = WebDriverWait(self.driver, 5).until(
+            # 這裡改成 logger.debug 避免洗版，或是 info 也可以
+            # self.logger.info("檢查是否有彈窗...")
+            popup = WebDriverWait(self.driver, 3).until(
                 EC.visibility_of_element_located((By.ID, "PromoteSignUpPopUp"))
             )
-            print("偵測到彈窗，嘗試關閉...")
             close_btn = popup.find_element(By.CSS_SELECTOR, ".popupCloseIcon.largeBannerCloser")
             close_btn.click()
-            # 等待彈窗消失
-            WebDriverWait(self.driver, 5).until(
-                EC.invisibility_of_element_located((By.ID, "PromoteSignUpPopUp"))
-            )
-            print("彈窗已關閉")
-        except TimeoutException:
-            print("未偵測到彈窗或彈窗未在時限內出現")
-        except Exception as e:
-            print(f"處理彈窗時發生非預期錯誤: {e}")
-            # 不讓彈窗錯誤中斷主流程
+            self.logger.info("偵測到彈窗並已關閉")
+        except:
+            pass 
 
-    def _apply_filters(self, start_date, end_date, target_countries):
-        """
-        應用國家與日期篩選。
-        """
-        print("開始設定篩選條件...")
-        
-        # 1. 國家篩選
+    def _apply_country_filters(self, target_countries):
+        """設定國家篩選"""
+        self.logger.info(f"設定國家篩選: {target_countries}")
         try:
             filter_btn = self.wait.until(EC.presence_of_element_located((By.ID, "filterStateAnchor")))
             self.driver.execute_script("arguments[0].click();", filter_btn)
-            time.sleep(1) # 等待動畫
+            time.sleep(1)
 
-            # 重置預設值 (取消所有勾選或恢復預設再取消)
-            # 這裡策略是先點擊 "恢復默認" 然後手動處理，或者直接遍歷取消。
-            # 為了保險，先嘗試點擊恢復默認 (如果有此按鈕且可見)
             try:
                 restore_btn = self.driver.find_element(By.ID, "filterRestoreDefaults")
                 if restore_btn.is_displayed():
@@ -151,7 +217,6 @@ class InvestingCalendarScraper:
             except:
                 pass
             
-            # 使用 target_countries 去勾選需要的，其他的取消勾選
             all_checked = self.driver.find_elements(By.CSS_SELECTOR, "ul.countryOption input:checked")
             for inp in all_checked:
                 try:
@@ -159,7 +224,6 @@ class InvestingCalendarScraper:
                 except:
                     pass
             
-            # 勾選目標國家
             country_labels = self.driver.find_elements(By.CSS_SELECTOR, "ul.countryOption li label")
             for label in country_labels:
                 country_name = label.text.strip()
@@ -170,179 +234,142 @@ class InvestingCalendarScraper:
                         if not input_box.is_selected():
                             self.driver.execute_script("arguments[0].click();", input_box)
             
-            # 提交國家篩選
             submit_btn = self.driver.find_element(By.ID, "ecSubmitButton")
             submit_btn.click()
-            
-            # 等待頁面刷新或遮罩消失
-            time.sleep(2) 
+            time.sleep(2)
             
         except Exception as e:
-            print(f"國家篩選設定失敗: {e}")
-            raise
+            self.logger.warning(f"國家篩選設定警告: {e}")
 
-        # 2. 日期篩選
+    def _apply_date_filters(self, start_date, end_date):
+        """設定日期篩選"""
         try:
-            print(f"使用 JS 直接套用日期: {start_date} - {end_date}")
+            self.logger.info(f"套用日期: {start_date} - {end_date}")
             self.driver.execute_script("calendarFilters.datePickerFilter(arguments[0], arguments[1]);", start_date, end_date)
-            # 等待加載
-            print("等待日期篩選套用(JS)...")
-            time.sleep(5)
+            time.sleep(3)
+            self._handle_popup()
             
         except Exception as e:
-            print(f"日期篩選設定失敗: {e}")
-            raise
-            
-        except Exception as e:
-            print(f"日期篩選設定失敗: {e}")
+            self.logger.error(f"日期篩選失敗: {e}")
             raise
 
     def _scroll_to_load(self, end_date_str):
-        """
-        無限捲動直到加載到結束日期的資料。
-        """
-        print("開始捲動載入資料...")
-        end_date = datetime.strptime(end_date_str, '%Y-%m-%d')
-        last_height = self.driver.execute_script("return document.body.scrollHeight")
-        
-        while True:
-            # 捲動到底部
-            self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-            time.sleep(2) # 等待資源加載
+        """捲動載入"""
+        self.logger.info("捲動載入資料中...")
+        try:
+            end_date = datetime.strptime(end_date_str, '%Y-%m-%d')
+            last_height = self.driver.execute_script("return document.body.scrollHeight")
             
-            # 檢查最新的日期
-            # 這裡我們解析最後一個顯示的日期行
-            try:
-                date_rows = self.driver.find_elements(By.CSS_SELECTOR, "#economicCalendarData tr.theDay")
-                if date_rows:
-                    last_date_text = date_rows[-1].text
-                    # 格式可能是 "2025年12月21日 星期日"
-                    # 嘗試簡化解析
-                    # 移除 " 星期X"
-                    clean_date_text = last_date_text.split(' ')[0]
-                    # 解析中文日期
-                    # 假設格式: YYYY年MM月DD日
-                    current_loaded_date = datetime.strptime(clean_date_text, '%Y年%m月%d日')
-                    
-                    if current_loaded_date >= end_date:
-                        print(f"已載入至 {clean_date_text}，滿足結束日期需求。")
-                        break
-            except Exception as e:
-                # 解析日期失敗可能是因為格式不同或尚未載入，繼續捲動嘗試
-                print(f"檢查日期時發生警告 (可能無礙): {e}")
+            max_scroll_attempts = 30
+            attempts = 0
 
-            # 檢查是否無法再捲動
-            new_height = self.driver.execute_script("return document.body.scrollHeight")
-            if new_height == last_height:
-                print("頁面已到底，停止捲動。")
-                break
-            last_height = new_height
+            while attempts < max_scroll_attempts:
+                self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+                time.sleep(2)
+                
+                try:
+                    date_rows = self.driver.find_elements(By.CSS_SELECTOR, "#economicCalendarData tr.theDay")
+                    if date_rows:
+                        last_date_text = date_rows[-1].text
+                        clean_date_text = last_date_text.split(' ')[0]
+                        try:
+                            # 支援中文日期格式 "YYYY年MM月DD日"
+                            current_loaded_date = datetime.strptime(clean_date_text, '%Y年%m月%d日')
+                            if current_loaded_date >= end_date:
+                                self.logger.info(f"已載入至 {clean_date_text}，停止捲動。")
+                                break
+                        except ValueError:
+                            pass
+                except:
+                    pass
+
+                new_height = self.driver.execute_script("return document.body.scrollHeight")
+                if new_height == last_height:
+                    break
+                last_height = new_height
+                attempts += 1
+        except Exception as e:
+            self.logger.warning(f"捲動時發生非致命錯誤: {e}")
 
     def _parse_data(self, start_date_str, end_date_str):
-        """
-        解析 HTML 表格資料。
-        """
-        print("開始解析 HTML...")
+        """解析 HTML"""
+        self.logger.info("解析 HTML 資料...")
         soup = BeautifulSoup(self.driver.page_source, 'html.parser')
         table = soup.find('table', id='economicCalendarData')
-        
         if not table:
-            print("未找到資料表格 #economicCalendarData")
+            self.logger.warning("未找到資料表格 #economicCalendarData")
             return []
-
+            
         results = []
         rows = table.find('tbody').find_all('tr')
-        
         current_date = None
-        current_year = datetime.now().year # 預設年份，以防萬一
-        
-        # 轉換輸入日期字串為 datetime 物件以便比較
         start_date_obj = datetime.strptime(start_date_str, '%Y-%m-%d')
         end_date_obj = datetime.strptime(end_date_str, '%Y-%m-%d')
 
         for row in rows:
-            # 檢查是否為日期列
-            # 注意: 實際 HTML 中，class="theDay" 是在 td 上，而不是 tr 上
             date_cell = row.find('td', class_='theDay')
             if date_cell:
-                date_text = date_cell.text.strip()
                 try:
-                    # 格式: "2025年12月7日 星期日"
-                    # 使用 split 並過濾空字串
-                    parts = date_text.split()
+                    parts = date_cell.text.strip().split()
                     if parts:
-                        clean_date_text = parts[0]
-                        current_date = datetime.strptime(clean_date_text, '%Y年%m月%d日')
-                except ValueError:
-                    print(f"日期解析失敗: {date_text}")
+                        current_date = datetime.strptime(parts[0], '%Y年%m月%d日')
+                except:
                     current_date = None
                 continue
             
-            # 檢查是否為事件列
             if 'js-event-item' in row.get('class', []):
-                if current_date is None:
-                    continue
-                
-                # 過濾日期範圍 (因為網頁可能會載入稍微超出範圍的資料)
-                if not (start_date_obj <= current_date <= end_date_obj):
-                    continue
+                if current_date and start_date_obj <= current_date <= end_date_obj:
+                    try:
+                        time_str = row.find('td', class_='time').text.strip()
+                        currency = row.find('td', class_='flagCur').text.strip()
+                        
+                        country_elem = row.find('td', class_='flagCur').find('span')
+                        country = country_elem.get('title') if country_elem else ""
+                        
+                        sentiment_td = row.find('td', class_='sentiment')
+                        importance = len(sentiment_td.find_all('i', class_='grayFullBullishIcon')) if sentiment_td else 0
 
-                try:
-                    time_str = row.find('td', class_='time').text.strip()
-                    currency = row.find('td', class_='flagCur').text.strip()
-                    
-                    country_elem = row.find('td', class_='flagCur').find('span')
-                    country = country_elem.get('title') if country_elem else ""
-                    
-                    sentiment_td = row.find('td', class_='sentiment')
-                    importance = len(sentiment_td.find_all('i', class_='grayFullBullishIcon')) if sentiment_td else 0
-                    
-                    event_elem = row.find('td', class_='event').find('a')
-                    event = event_elem.text.strip() if event_elem else row.find('td', class_='event').text.strip()
-                    
-                    actual = row.find('td', class_='act').text.strip()
-                    forecast = row.find('td', class_='fore').text.strip()
-                    previous = row.find('td', class_='prev').text.strip()
-                    
-                    # 組合完整時間
-                    # 注意: time_str 可能是 "全天" 或具體時間 "15:30"
-                    timestamp = f"{current_date.strftime('%Y-%m-%d')} {time_str}"
-                    
-                    item = {
-                        "date": current_date.strftime('%Y-%m-%d'),
-                        "time": time_str,
-                        "timestamp": timestamp,
-                        "country": country,
-                        "currency": currency,
-                        "importance": importance,
-                        "event": event,
-                        "actual": actual,
-                        "forecast": forecast,
-                        "previous": previous
-                    }
-                    results.append(item)
-                    
-                except AttributeError as e:
-                    # 某些欄位可能缺失，略過該行或記錄錯誤
-                    continue
+                        event = row.find('td', class_='event').text.strip()
+                        actual = row.find('td', class_='act').text.strip()
+                        forecast = row.find('td', class_='fore').text.strip()
+                        previous = row.find('td', class_='prev').text.strip()
+                        
+                        timestamp = f"{current_date.strftime('%Y-%m-%d')} {time_str}"
 
-        print(f"解析完成，共提取 {len(results)} 筆資料。")
+                        item = {
+                            "date": current_date.strftime('%Y-%m-%d'),
+                            "time": time_str,
+                            "timestamp": timestamp,
+                            "country": country,
+                            "currency": currency,
+                            "importance": importance,
+                            "event": event,
+                            "actual": actual,
+                            "forecast": forecast,
+                            "previous": previous
+                        }
+                        results.append(item)
+                    except Exception:
+                        continue
         return results
 
     def _save_data(self, data, filename):
-        """
-        儲存資料為 JSON。
-        """
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
 
 if __name__ == "__main__":
-    # 測試執行
-    scraper = InvestingCalendarScraper(headless=True) # 使用 True 進行無頭測試
+    # 使用 headless=False 來進行有畫面的測試
+    # 如果要完全背景執行，請改為 True
+    scraper = InvestingCalendarScraper(headless=False)
     
-    # 設定測試日期，例如未來一週
-    # 注意: 為了測試，這裡使用預設值
     try:
-        scraper.run()
+        # 測試：爬取 2025 全年資料
+        scraper.run(
+            start_date="2000-01-01", 
+            end_date="2014-12-31", 
+            interval_days=14,
+            # target_countries=['美國', '台灣', '中國', '歐盟區', '日本']
+        )
     except Exception as e:
+        # 這裡的 print 是最後一道防線，如果 logger 初始化失敗至少看得到錯誤
         print(f"測試執行失敗: {e}")
